@@ -12,6 +12,6 @@ sudo python3 -m pip install glances
 sudo rpi-update
 
 # Reboot
-echo "\x1b[31mWarning: Reboot after 5s !\x1b[0m"
+printf "\x1b[31m%s\x1b[0m" "Warning: Reboot after 5s !"
 sleep 10s
 sudo reboot
