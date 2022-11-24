@@ -9,7 +9,7 @@ sudo python3 -m pip install --upgrade pip
 sudo python3 -m pip install glances
 
 # Firmware Update
-sudo rpi-update
+sudo rpi-update -y
 
 # Reboot
 printf "\x1b[31m%s\x1b[0m" "Warning: Reboot after 5s !"
