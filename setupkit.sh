@@ -5,7 +5,7 @@ sudo apt dist-upgrade
 
 # Install
 sudo apt install -y vim python3-pip
-sudo python3 -m pip --upgrade pip
+sudo python3 -m pip install --upgrade pip
 sudo python3 -m pip install glances
 
 # Firmware Update
