@@ -13,5 +13,5 @@ sudo rpi-update -y
 
 # Reboot
 printf "\x1b[31m%s\x1b[0m" "Warning: Reboot after 5s !"
-sleep 10s
+sleep 5s
 sudo reboot
