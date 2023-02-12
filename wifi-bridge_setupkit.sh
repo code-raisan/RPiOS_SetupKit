@@ -28,6 +28,7 @@ sh -c "iptables-save > /etc/iptables.ipv4.nat"
 cmd <<EOS
 sudo ifconfig eth0 192.168.4.1
 iptables-restore < /etc/iptables.ipv4.nat
+exit 0
 EOS
 sed -i s/exit 0/${cmd}/ /etc/rc.local
 
