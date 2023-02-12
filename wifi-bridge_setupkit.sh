@@ -24,14 +24,6 @@ iptables -A FORWARD -i wlan0 -o eth0 -m state --state RELATED,ESTABLISHED -j ACC
 iptables -A FORWARD -i eth0 -o wlan0 -j ACCEPT
 sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
-# Auto Setting
-cmd <<EOS
-sudo ifconfig eth0 192.168.4.1
-iptables-restore < /etc/iptables.ipv4.nat
-exit 0
-EOS
-sed -i s/exit 0/${cmd}/ /etc/rc.local
-
 # Reboot
 printf "\n\n\x1b[31m%s\x1b[0m" "Warning: Reboot after 5s !"
 sleep 5s
