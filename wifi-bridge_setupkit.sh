@@ -29,7 +29,7 @@ cmd <<EOS
 sudo ifconfig eth0 192.168.4.1
 iptables-restore < /etc/iptables.ipv4.nat
 EOS
-sed -e "12a ${cmd}" /etc/rc.local
+sed -i s/exit 0/${cmd}/ /etc/rc.local
 
 # Reboot
 printf "\n\n\x1b[31m%s\x1b[0m" "Warning: Reboot after 5s !"
